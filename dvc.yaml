@@ -1,0 +1,17 @@
+stages:
+  get_data:
+    cmd: python MY_Data/get_data.py
+    deps:
+      - MY_Data/get_data.py
+    outs:
+      - data/heart_raw.csv
+
+  train:
+    cmd: python MY_Data/train.py
+    deps:
+      - MY_Data/train.py
+      - data/heart_raw.csv
+    metrics:
+      - metrics.json
+    plots:
+      - confusion_matrix.png

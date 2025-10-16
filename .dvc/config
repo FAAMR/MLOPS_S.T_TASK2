@@ -1,0 +1,6 @@
+[core]
+    remote = myremote
+['remote "mylocal"']
+    url = ../../dvc_remote
+['remote "myremote"']
+    url = C:\Users\FARIDA\dvc_remote

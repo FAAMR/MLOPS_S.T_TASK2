@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 # Path to your downloaded CSV
-file_path = r'C:\Users\FARIDA\Desktop\TASK\MLOPS_S.T_TASK2\MY_Data\heart.csv'
+file_path = r'C:\Users\FARIDA\Downloads\archive (1)\heart.csv'
 
 # Read the CSV
 df = pd.read_csv(file_path)

@@ -1,5 +1,5 @@
 import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
 import json
@@ -46,9 +46,9 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # -------------------------------
-# Train Random Forest model
+# Train Decision Tree model
 # -------------------------------
-model = RandomForestClassifier(n_estimators=100, random_state=42)
+model = DecisionTreeClassifier(random_state=42)
 model.fit(X_train, y_train)
 preds = model.predict(X_test)
 
@@ -81,4 +81,4 @@ plt.close()
 # -------------------------------
 joblib.dump(model, 'MY_Data/model.pkl')
 
-print("Training done. Metrics, confusion matrix, and model saved in MY_Data folder.")
+print("Training done with Decision Tree. Metrics, confusion matrix, and model saved in MY_Data folder.")
